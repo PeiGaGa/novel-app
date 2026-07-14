@@ -16,8 +16,8 @@
     "dist:portable": "npm run build && electron-builder --win portable",
     "dist:win": "npm run build && electron-builder --win nsis portable",
     "dist:mac": "npm run build && npm run dist:mac:x64 && npm run dist:mac:arm64",
-    "dist:mac:x64": "cross-env CSC_IDENTITY_AUTO_DISCOVERY=false electron-builder --mac dmg zip --x64",
-    "dist:mac:arm64": "cross-env CSC_IDENTITY_AUTO_DISCOVERY=false electron-builder --mac dmg zip --arm64"
+    "dist:mac:x64": "cross-env CSC_IDENTITY_AUTO_DISCOVERY=false electron-builder --mac dmg zip --x64 --publish never",
+    "dist:mac:arm64": "cross-env CSC_IDENTITY_AUTO_DISCOVERY=false electron-builder --mac dmg zip --arm64 --publish never"
   },
   "dependencies": {
     "cheerio": "1.0.0-rc.12",

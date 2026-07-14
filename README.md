@@ -109,6 +109,7 @@ npm run dist:mac
 当前配置生成未签名安装包。首次打开时 macOS 可能阻止运行，可在“系统设置 → 隐私与安全性”中允许打开。正式公开分发需要 Apple Developer ID 证书并进行 notarization 公证。
 
 Intel 与 Apple Silicon 安装包会顺序构建，并使用仅包含 ASCII 字符和架构名的 DMG 卷名，以避免 GitHub Actions 中的 DMG 挂载路径冲突。
+构建命令明确禁用自动发布，安装包只会作为 Actions Artifacts 上传，不需要配置 `GH_TOKEN`。
 
 默认配置关闭了 Windows 代码签名和可执行文件资源编辑：
 
